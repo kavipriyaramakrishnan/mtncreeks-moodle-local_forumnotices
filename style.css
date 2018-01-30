@@ -1,0 +1,7 @@
+#printtable {
+    border-collapse: collapse;
+}
+
+#printtable td, #printtable th {
+    border: 1px solid;
+}
