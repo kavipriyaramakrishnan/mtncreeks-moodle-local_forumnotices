@@ -68,6 +68,7 @@ if ($data = $mform->get_data()) {
 		    $discussion->name         = $data->subject;
 		    $discussion->userid       = $USER->id;
 		    $discussion->timemodified = $timenow;
+            $discussion->usermodified = $USER->id;
 		    $discussion->timestart    = $data->timestart;
 		    $discussion->timeend      = $data->timeend;
 		    if ($data->pinned) {
@@ -152,6 +153,7 @@ if ($data = $mform->get_data()) {
                 $discussion->name         = $data->subject;
                 $discussion->userid       = $USER->id;
                 $discussion->timemodified = $timenow;
+                $discussion->usermodified = $USER->id;
                 $discussion->timeend      = $data->timeend;
                 if ($data->pinned) {
                         $pinnedpost = $DB->get_record('forum_discussions', array('course' => $data->courseid, 'forum' => $frmv, 'pinned' => 1));
@@ -213,6 +215,7 @@ if ($data = $mform->get_data()) {
 		$discussion->name         = $data->subject;
 		$discussion->userid       = $USER->id;
 		$discussion->timemodified = $timenow;
+        $discussion->usermodified = $USER->id;
 		$discussion->timestart    = $data->timestart;
 		$discussion->timeend      = $data->timeend;
 		if ($data->pinned) {
